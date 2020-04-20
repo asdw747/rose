@@ -51,7 +51,7 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '首页', icon: 'dashboard' }
     }]
   },
 
@@ -73,16 +73,9 @@ export const constantRoutes = [
         name: 'Tree',
         component: () => import('@/views/tree/index'),
         meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
+      },
       {
-        path: 'index',
+        path: '/form',
         name: 'Form',
         component: () => import('@/views/form/index'),
         meta: { title: 'Form', icon: 'form' }
@@ -96,7 +89,7 @@ export const constantRoutes = [
     redirect: '/nested/menu1',
     name: 'Nested',
     meta: {
-      title: 'Nested',
+      title: '关联',
       icon: 'nested'
     },
     children: [
@@ -149,12 +142,37 @@ export const constantRoutes = [
   },
 
   {
+    path: '/wechat',
+    component: Layout,
+    redirect: '/wechat/message',
+    name: 'Wechat',
+    meta: {
+      title: '微信',
+      icon: ''
+    },
+    children: [
+      {
+        path: 'message',
+        name: 'Message',
+        component: () => import('@/views/nested/menu2/index'),
+        meta: { title: '消息', icon: '' }
+      },
+      {
+        path: 'display',
+        name: 'Display',
+        component: () => import('@/views/nested/menu2/index'),
+        meta: { title: '展示', icon: '' }
+      }
+    ]
+  },
+
+  {
     path: 'external-link',
     component: Layout,
     children: [
       {
         path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: 'External Link', icon: 'link' }
+        meta: { title: '链接', icon: 'link' }
       }
     ]
   },
