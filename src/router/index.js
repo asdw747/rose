@@ -98,7 +98,7 @@ export const constantRoutes = [
       {
         path: 'privilege',
         name: 'Privilege',
-        component: () => import('@/views/manage/user/index'),
+        component: () => import('@/views/manage/privilege/index'),
         meta: { title: '权限', icon: 'eye' }
       }
     ]

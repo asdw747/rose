@@ -53,9 +53,9 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': [2, 2, {
-      'SwitchCase': 1
-    }],
+    // 'indent': [2, 2, {
+    //   'SwitchCase': 1
+    // }],
     'jsx-quotes': [2, 'prefer-single'],
     'key-spacing': [2, {
       'beforeColon': false,
@@ -132,7 +132,7 @@ module.exports = {
     'no-sparse-arrays': 2,
     'no-this-before-super': 2,
     'no-throw-literal': 2,
-    'no-trailing-spaces': 2,
+    // 'no-trailing-spaces': 2,
     'no-undef': 2,
     'no-undef-init': 2,
     'no-unexpected-multiline': 2,
@@ -142,10 +142,11 @@ module.exports = {
     }],
     'no-unreachable': 2,
     'no-unsafe-finally': 2,
-    'no-unused-vars': [2, {
-      'vars': 'all',
-      'args': 'none'
-    }],
+    // 'no-unused-vars': [2, {
+    //   'vars': 'all',
+    //   'args': 'none'
+    // }],
+    'no-unused-vars': 'off',
     'no-useless-call': 2,
     'no-useless-computed-key': 2,
     'no-useless-constructor': 2,
@@ -155,12 +156,12 @@ module.exports = {
     'one-var': [2, {
       'initialized': 'never'
     }],
-    'operator-linebreak': [2, 'after', {
-      'overrides': {
-        '?': 'before',
-        ':': 'before'
-      }
-    }],
+    // 'operator-linebreak': [2, 'after', {
+    //   'overrides': {
+    //     '?': 'before',
+    //     ':': 'before'
+    //   }
+    // }],
     'padded-blocks': [2, 'never'],
     'quotes': [2, 'single', {
       'avoidEscape': true,
